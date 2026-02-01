@@ -9,5 +9,10 @@ export default $config({
       home: "aws",
     };
   },
-  async run() {},
+  async run() {
+    await import("./infrastructure/server");
+    await import("./infrastructure/bucket");
+    await import("./infrastructure/delivery");
+    // await import("./infrastructure/athena");
+  },
 });
