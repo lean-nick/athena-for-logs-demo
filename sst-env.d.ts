@@ -10,9 +10,13 @@ declare module "sst" {
       "name": string
       "type": "sst.aws.Bucket"
     }
-    "MyFunction": {
+    "MyFunction2": {
       "name": string
       "type": "sst.aws.Function"
+    }
+    "QueryResultsBucket": {
+      "name": string
+      "type": "sst.aws.Bucket"
     }
   }
 }

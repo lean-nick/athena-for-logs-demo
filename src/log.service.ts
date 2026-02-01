@@ -83,11 +83,12 @@ export function addToEventContext(updateFields: Partial<LogEventContext>) {
 export function recordEventContext() {
     const durationMs = Date.now() - new Date(context.timestamp).getTime();
     const memoryUsed = process.memoryUsage().heapUsed;
-    console.info({
+    console.log('about to log the event context')
+    console.log(JSON.stringify({
         ...context,
         performance: {
             duration_ms: durationMs,
             memory_used: memoryUsed,
         },
-    })
+    }));
 }

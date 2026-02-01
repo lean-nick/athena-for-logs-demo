@@ -13,6 +13,6 @@ export default $config({
     await import("./infrastructure/server");
     await import("./infrastructure/bucket");
     await import("./infrastructure/delivery");
-    // await import("./infrastructure/athena");
+    await import("./infrastructure/athena");
   },
 });

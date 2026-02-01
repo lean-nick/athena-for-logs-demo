@@ -1,7 +1,8 @@
-export const server = new sst.aws.Function("MyFunction", {
-    handler: "src/main.handler.ts",
+export const server = new sst.aws.Function("MyFunction2", {
+    handler: "src/main.handler",
     environment: {
-        REGION: aws.getRegion().then(r => r.name),
+        REGION: 'us-east-1',
         BUSINESS_LIFECYCLE: "production",
     },
+    timeout: '1 minute',
 });
